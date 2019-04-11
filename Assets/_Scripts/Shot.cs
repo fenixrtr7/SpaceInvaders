@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shot : MonoBehaviour
 {
     public float speed = 6;
+    public int damage = 1;
 
     Rigidbody2D rigid;
 
@@ -20,6 +21,11 @@ public class Shot : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
+        else if(other.gameObject.CompareTag("Block"))
+        {
+            other.gameObject.GetComponent<Wall>().DamageWall(damage);
             Destroy(this.gameObject);
         }
     }

@@ -1,0 +1,15 @@
+--Enemy--
+- "Invocar" enemigos.
+- Hacer una lista de enemigos.
+- "Matriz" de enemigos x, y.
+- Los No 1 atacan.
+- Verificar si no tienen a un enemigo enfrente.
+- Uso de "Raycast".
+
+--Vida--
+- player
+- wall
+
+
+Idea:
+- Panel rojo daño de vida
