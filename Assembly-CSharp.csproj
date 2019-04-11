@@ -61,9 +61,12 @@
      <Compile Include="Assets\_Scripts\ManagerEnemies.cs" />
      <Compile Include="Assets\_Scripts\MoveCharacter.cs" />
      <Compile Include="Assets\_Scripts\ShipController.cs" />
+     <Compile Include="Assets\_Scripts\ShipShoot.cs" />
+     <Compile Include="Assets\_Scripts\Shot.cs" />
      <Compile Include="Assets\_Scripts\UFO\CameraController.cs" />
      <Compile Include="Assets\_Scripts\UFO\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\UFO\Rotator.cs" />
+     <Compile Include="Assets\_Scripts\Wall.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
      <None Include="Assets\TutorialInfo\Fonts\LICENSE.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">

@@ -14,9 +14,9 @@ public class ManagerEnemies : MonoBehaviour
         }
     }
 
+    // Señal de choque, Mandar mensaje a "Enemies"
     public void Signal()
     {
-        Debug.Log("Choco enemigo");
         foreach (GameObject enemy in moveEnemy)
         {
             enemy.GetComponent<EnemyMove>().ChangeDirection();

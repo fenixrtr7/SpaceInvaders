@@ -42,7 +42,6 @@ public class EnemyMove : MoveCharacter
         
         if (left)
             {
-                Debug.Log("Cambio de dirección");
                 left = false;
             }
             else
