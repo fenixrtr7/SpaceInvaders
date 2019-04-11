@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wall : MonoBehaviour
+public class Wall : Life
 {
     public Sprite spriteA;
     public Sprite spriteB;
-    public int hp = 5;
     SpriteRenderer spriteRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void DamageWall(int loss)
+    public override void DamageWall(int loss)
     {
         if(hp == 4)
         {
@@ -24,11 +24,6 @@ public class Wall : MonoBehaviour
         {
             spriteRenderer.sprite = spriteB;
         }
-        
-        hp -= loss;
-        if (hp <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+        base.DamageWall(loss);
     }
 }

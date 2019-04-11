@@ -6,7 +6,7 @@ public class Life : MonoBehaviour
 {
     public int hp = 3;
     
-    protected virtual void DamageWall(int loss)
+    public virtual void DamageWall(int loss)
     {
         hp -= loss;
         if (hp <= 0)

@@ -8,12 +8,7 @@ public class ShipShoot : MonoBehaviour
     public GameObject shot;
 
     float contador = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         contador += Time.deltaTime;

@@ -28,5 +28,14 @@ public class Shot : MonoBehaviour
             other.gameObject.GetComponent<Wall>().DamageWall(damage);
             Destroy(this.gameObject);
         }
+        else if(other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<ShipLife>().DamageWall(damage);
+            Destroy(this.gameObject);
+        }
+        else if(other.gameObject.CompareTag("Shoot"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

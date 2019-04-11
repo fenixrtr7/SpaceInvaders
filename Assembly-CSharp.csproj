@@ -57,12 +57,13 @@
      <Compile Include="Assets\_Completed-Assets\Scripts\CompletePlayerController.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\CompleteRotator.cs" />
      <Compile Include="Assets\_Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\_Scripts\EnemyShoot.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
      <Compile Include="Assets\_Scripts\Life.cs" />
      <Compile Include="Assets\_Scripts\LoadGame.cs" />
      <Compile Include="Assets\_Scripts\ManagerEnemies.cs" />
      <Compile Include="Assets\_Scripts\MoveCharacter.cs" />
-     <Compile Include="Assets\_Scripts\ShipController.cs" />
+     <Compile Include="Assets\_Scripts\ShipLife.cs" />
      <Compile Include="Assets\_Scripts\ShipShoot.cs" />
      <Compile Include="Assets\_Scripts\Shot.cs" />
      <Compile Include="Assets\_Scripts\UFO\CameraController.cs" />
