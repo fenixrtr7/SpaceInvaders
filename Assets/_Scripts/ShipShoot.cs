@@ -7,9 +7,9 @@ public class ShipShoot : MonoBehaviour
     public float delay = 0.5f;
     public GameObject shot;
 
-    float contador = 0;
+    protected float contador = 0;
     
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         contador += Time.deltaTime;
 

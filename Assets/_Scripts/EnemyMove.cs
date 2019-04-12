@@ -4,31 +4,24 @@ using UnityEngine;
 
 public class EnemyMove : MoveCharacter
 {
-    public float tiempoCambio = 4f;
+    public float downEnemy = 1f;
 
     float h = 1;
     bool left = true;
 
     ManagerEnemies manager;
 
-    private void Awake() {
+    private void Awake()
+    {
         manager = GetComponentInParent<ManagerEnemies>();
     }
 
     protected override void FixedUpdate()
     {
-        if (left)
-        {
-            h = -1;
-        }
-        else if (!left)
-        {
-            h = 1;
-        }
-
+        h = left ? -1 : 1;
         Move(h);
     }
-    
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Wall"))
@@ -36,17 +29,9 @@ public class EnemyMove : MoveCharacter
             manager.Signal();
         }
     }
-
+    
     public void ChangeDirection()
     {
-        
-        if (left)
-            {
-                left = false;
-            }
-            else
-            {
-                left = true;
-            }
+        left = left ? false : true;
     }
 }

@@ -4,6 +4,7 @@ Version 0.13
 Lista de tareas.
 
 --Enemy--
+- "Raycast" para verificar si puede disparar
 - "Invocar" enemigos.
 - Hacer una lista de enemigos.
 - "Matriz" de enemigos x, y.
@@ -13,8 +14,8 @@ Lista de tareas.
 
 --Vida--
 - player
-- wall
+- (wall)
 
 
 Idea:
-- Panel rojo daño de vida
+- Si choca enemy con muro le quita vida

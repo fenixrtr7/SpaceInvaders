@@ -20,6 +20,7 @@ public class ManagerEnemies : MonoBehaviour
         foreach (GameObject enemy in moveEnemy)
         {
             enemy.GetComponent<EnemyMove>().ChangeDirection();
+            enemy.GetComponent<EnemyMove>().DownEnemy();
         }
     }
 }

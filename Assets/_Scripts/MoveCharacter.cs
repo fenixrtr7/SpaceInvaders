@@ -6,6 +6,7 @@ using UnityEngine;
 public class MoveCharacter : MonoBehaviour
 {
     public float speed = 6f;
+    public int factorDown = 15;
 
     Vector3 movement;
     Rigidbody2D rigid;
@@ -21,9 +22,16 @@ public class MoveCharacter : MonoBehaviour
         Move(h);   
     }
 
+    // Movimiento
     protected virtual void Move(float h)
     {
         movement.Set(h, 0f, 0f);
         rigid.MovePosition(transform.position + movement * speed * Time.deltaTime);
+    }
+
+    //Enemigo baja
+    public void DownEnemy()
+    {
+        transform.Translate(Vector3.down / factorDown);
     }
 }
