@@ -1,21 +1,16 @@
 
-Version 0.13
+Prox Version 0.16
 
 Lista de tareas.
 
 --Enemy--
-- "Raycast" para verificar si puede disparar
+
 - "Invocar" enemigos.
 - Hacer una lista de enemigos.
 - "Matriz" de enemigos x, y.
-- Los No 1 atacan.
-- Verificar si no tienen a un enemigo enfrente.
-- Uso de "Raycast".
-
---Vida--
-- player
-- (wall)
-
 
 Idea:
 - Si choca enemy con muro le quita vida
+
+- Puntuacion
+- Max puntuacion

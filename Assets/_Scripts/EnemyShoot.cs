@@ -16,7 +16,7 @@ public class EnemyShoot : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
-        Debug.DrawRay(transform.position, Vector3.down / 3, Color.blue);
+        Debug.DrawRay(transform.position, Vector3.down / 2, Color.blue);
         contador += Time.deltaTime;
 
         if (contador >= delay)
@@ -37,11 +37,20 @@ public class EnemyShoot : MonoBehaviour
 
     bool CanShoot()
     {
-        RaycastHit2D hit;
+        //RaycastHit2D hit;
         Vector2 start = transform.position;
-        hit = Physics2D.Linecast(start, Vector2.down / 2, blockingLayer);
 
-        return (hit.collider == null) ? true : false;
+        if(Physics2D.Linecast(start, Vector2.down / 2))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+        // hit = Physics2D.Linecast(start, Vector2.down / 2);
+
+        // return (hit.collider == null) ? true : false;
 
     }
 }

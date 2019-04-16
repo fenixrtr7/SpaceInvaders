@@ -9,13 +9,6 @@ public class EnemyMove : MoveCharacter
     float h = 1;
     bool left = true;
 
-    ManagerEnemies manager;
-
-    private void Awake()
-    {
-        manager = GetComponentInParent<ManagerEnemies>();
-    }
-
     protected override void FixedUpdate()
     {
         h = left ? -1 : 1;
@@ -26,10 +19,13 @@ public class EnemyMove : MoveCharacter
     {
         if (other.gameObject.CompareTag("Wall"))
         {
-            manager.Signal();
+            ManagerEnemies.instance.Signal();
+        }else
+        {
+            return;
         }
     }
-    
+
     public void ChangeDirection()
     {
         left = left ? false : true;
