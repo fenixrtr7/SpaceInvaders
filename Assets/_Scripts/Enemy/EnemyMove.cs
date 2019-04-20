@@ -19,10 +19,17 @@ public class EnemyMove : MoveCharacter
     {
         if (other.gameObject.CompareTag("Wall"))
         {
-            ManagerEnemies.instance.Signal();
-        }else
+            ManagerEnemies.instance.SignalChangeDirection();
+            Debug.Log("Chocamos con muro");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Wall"))
         {
-            return;
+            ManagerEnemies.instance.SignalDownEnemy();
+            Debug.Log("Bajamos");
         }
     }
 
